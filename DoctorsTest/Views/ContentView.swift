@@ -70,10 +70,8 @@ struct TabViewItem: View {
                     }
                     
                 }
-                Spacer()
                 Text(pageItem.pageName).font(.system(size: 12)).foregroundStyle(.appDarkGray)
             }
-            .frame(maxHeight: 45)
                 .padding(.top, 13)
                 .padding(.horizontal, 25)
         }
