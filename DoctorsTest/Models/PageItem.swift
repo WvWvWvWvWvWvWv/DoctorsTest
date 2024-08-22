@@ -18,9 +18,9 @@ struct PageItem: Identifiable {
     static func pages() -> [PageItem]{
         [
             PageItem(pageName: "Главная", pageTag: "homeGray", ifSelectedPng: "homePink", badge: 0),
-            PageItem(pageName: "Приёмы", pageTag: "pagesIm", ifSelectedPng: "pagesIm", badge: 0),
+            PageItem(pageName: "Приёмы", pageTag: "calendar", ifSelectedPng: "calendar", badge: 0),
             PageItem(pageName: "Чат", pageTag: "chat", ifSelectedPng: "chat", badge: 1),
-            PageItem(pageName: "Профиль", pageTag: "Union", ifSelectedPng: "Union", badge: 0)
+            PageItem(pageName: "Профиль", pageTag: "Union", ifSelectedPng: "UnionPink", badge: 0)
         ]
     }
 }

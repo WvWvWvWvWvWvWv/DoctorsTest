@@ -26,7 +26,7 @@ struct ContentView: View {
             Text("Профиль")
                 .tag("Union")
         }
-        HStack(spacing: 0){
+        HStack(alignment: .bottom,spacing: 0){
             ForEach(pages){
                 page in
                 TabViewItem(selectionPage: $selectionPage, badge: page.badge, pageItem: page)
@@ -50,7 +50,16 @@ struct TabViewItem: View {
         } label :{
             VStack{
                 ZStack{
-                    Image(selectionPage == pageItem.pageTag ? pageItem.ifSelectedPng : pageItem.pageTag)
+                    if selectionPage == pageItem.pageTag{
+                        Image(pageItem.pageTag)
+                            .renderingMode(.template)
+                                .foregroundStyle(.appPink)
+
+                    }
+                    else {
+                            Image(pageItem.pageTag)
+                        
+                    }
                     if badge > 0 {
                         ZStack{
                             Circle().foregroundStyle(.appPink)
@@ -61,8 +70,10 @@ struct TabViewItem: View {
                     }
                     
                 }
+                Spacer()
                 Text(pageItem.pageName).font(.system(size: 12)).foregroundStyle(.appDarkGray)
             }
+            .frame(maxHeight: 45)
                 .padding(.top, 13)
                 .padding(.horizontal, 25)
         }
