@@ -82,14 +82,7 @@ struct DoctorsView: View {
                         }
                     }
                     .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            HStack{
-                                Image(.arrow)
-
-                            }.toolbarTitleDisplayMode(.inlineLarge).navigationBarTitle("Педиатры")
-                        }
-                    }
+                    .toolbarTitleDisplayMode(.inlineLarge).navigationBarTitle("Педиатры")
             }.background(.mainBG)
             }.searchable(text: $searchText ,prompt: "Найти")
         }

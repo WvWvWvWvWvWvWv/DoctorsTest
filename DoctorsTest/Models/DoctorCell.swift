@@ -17,9 +17,8 @@ struct DoctorCell: View {
                 HStack(alignment: .top, spacing: 16){
                     WebImage(url: URL(string: doctor.avatar ?? ""))
                         .resizable()
-                        .frame(width: 50, height: 50)
                         .scaledToFill()
-                        .clipped()
+                        .frame(width: 50, height: 50)
                         .clipShape(Circle())
                     VStack(alignment: .leading, spacing: 8){
                         Text(doctor.lastName).font(.system(size: 16, weight: .bold))

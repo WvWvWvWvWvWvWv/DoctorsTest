@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectionPage: String = ""
+    @State var selectionPage: String = "homeGray"
     let pages: [PageItem] = PageItem.pages()
     init(){
         UITabBar.appearance().isHidden = true
@@ -26,7 +26,7 @@ struct ContentView: View {
             Text("Профиль")
                 .tag("Union")
         }
-        HStack{
+        HStack(spacing: 0){
             ForEach(pages){
                 page in
                 TabViewItem(selectionPage: $selectionPage, badge: page.badge, pageItem: page)
